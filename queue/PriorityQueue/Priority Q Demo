@@ -1,0 +1,47 @@
+package queue.priority.queue;
+
+import java.util.Collections;
+import java.util.PriorityQueue;
+
+/*
+ By Default Collection's PriorityQueue Implements Min-Heap 
+*/ 
+public class PriorityQueueDemo {
+
+	public static void main(String[] args) {
+		
+		// Min-Heap implementation
+		PriorityQueue<Integer> pq = new PriorityQueue<>() ;  
+		pq.add(10) ;
+		pq.add(10) ;
+		pq.add(10) ;
+		pq.add(13) ;
+		pq.add(15) ;
+		pq.add(1) ;
+		
+		System.out.println("Min-Heap Size is : "+ pq.size());
+		while(!pq.isEmpty()) {
+			System.out.print(pq.peek() + " ");
+			pq.poll();
+		}
+		
+		System.out.println();
+		// Max-Heap Implementation
+		PriorityQueue<Integer> pq2 = new PriorityQueue<>(Collections.reverseOrder());
+		pq2.add(10) ;
+		pq2.add(10) ;
+		pq2.add(10) ;
+		pq2.add(13) ;
+		pq2.add(15) ;
+		pq2.add(1) ;
+		
+		System.out.println("Max-Heap size id  : "+ pq2.size());
+		while(!pq2.isEmpty()) {
+			System.out.print(pq2.peek() + " ");
+			pq2.poll();
+		}
+		
+	}
+
+
+}
